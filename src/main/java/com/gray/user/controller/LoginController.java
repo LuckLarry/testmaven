@@ -14,15 +14,15 @@ public class LoginController {
 	@Autowired
 	private UserServiceImpl userService;
 	
-	@RequestMapping("/login.do")
+	@RequestMapping("/login")
 	public String doLogin(User user,Model model){
-		if(userService.doUserLogin(user)){  
-	        model.addAttribute("successMsg", "µÇÂ½³É¹¦£¡");//·µ»Øµ½Ò³ÃæËù¼Ð´øµÄ²ÎÊý  
-	        model.addAttribute("name", user.getUsername());  
-	        return "/success";//·µ»ØµÄÒ³Ãæ  
+		if(userService.doUserLogin(user)){
+	        model.addAttribute("successMsg", "ï¿½ï¿½Â½ï¿½É¹ï¿½ï¿½ï¿½");//ï¿½ï¿½ï¿½Øµï¿½Ò³ï¿½ï¿½ï¿½ï¿½Ð´ï¿½Ä²ï¿½ï¿½ï¿½  
+	        model.addAttribute("name", user.getUsername());
+	        return "/success";//ï¿½ï¿½ï¿½Øµï¿½Ò³ï¿½ï¿½  
 	    }else{  
-	        model.addAttribute("failMsg", "ÓÃ»§²»´æÔÚ»òÃÜÂë´íÎó£¡");  
+	        model.addAttribute("failMsg", "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");  
 	        return "/fail";  
-	    }     
+	    }
 	}
 }

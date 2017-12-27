@@ -24,6 +24,7 @@
 			<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+	<mvc:resources location="/assets/" mapping="/assets/**"/>
 	    
 	<!-- 使用annotation 自动注册bean,并保证@Required,@Autowired的属性被注入 -->
 	<context:component-scan base-package="com.gray"> 

@@ -2,6 +2,10 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
 <configuration>  
     <typeAliases>  
-        <typeAlias alias="user" type="com.gray.user.entity.User"/>  
+        <typeAlias alias="user" type="com.gray.user.entity.User"/> 
+        <package name="com.gray.bean"/> 
     </typeAliases>  
+    <mappers>
+    	<package name="com.gray.user.entity"/>
+    </mappers>
 </configuration>  

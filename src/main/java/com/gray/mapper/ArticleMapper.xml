@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.gray.mapper.ArticleMapper">
+
+	<resultMap type="article" id="articleResultMap">
+		<id column="id_" property="id"/>
+		<result column="name_" property="name"/>
+		<result  column="price_" property="price"/> 
+	</resultMap> 
+	<select id="findArticleById" parameterType="int" resultMap="articleResultMap">
+		select id id_,name name_,price price_ from article where id=#{value}
+	</select>
+</mapper>
